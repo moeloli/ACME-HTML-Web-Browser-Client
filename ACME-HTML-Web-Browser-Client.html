@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAe1BMVEUDuu3///8AtuwAue1c0/QAt+1a0vSZ4/gOve4Ju+4AtOzf9v31/P4iw/DS8/yf5fnE7/tNzvMsxvHw+/7t+v7k+P2U4veO4PeA3Pbp+f7h9/3Y9f3I8Pxt1/Vi1PRQz/NDzPIzyPEWv+76/v/3/f+87fqn5/mI3/Z82vb+fQDoAAAA10lEQVQ4y63T2c7CIBCGYWamUwFZurfuy7/e/xVaeySlYmJ8T78nISQgPh0xU2pGZa1EfrazHJz5an2FT3brYKoul4UqAHx5Hhqoq6VTMAc4aER9acDjEviFPd2voP9gKykGVECHkzyBsRzvI+g1jWG5BFDIPXRKjqkcTKUwPISPbvsN9XpqA9DuehXsF4g64APALAY+AHkMVm+CzToNVld1NAmwE0zaJ0DBQughAcxZ66tLAGj6f/f2NdMgewXKGHSPgOTPfG/Dh0vqlAXlluefahaLT3UDvrAKrj7jLKkAAAAASUVORK5CYII=" />
 
-<title>ACME Web Browser Client | ACME客户端H5网页单文件版，在线免费申请签发SSL/TLS通配符泛域名HTTPS证书，支持Let's Encrypt、ZeroSSL，无需账号免登录注册 | Windows macOS Get Wildcard Certificates Online For Free - Single HTML File</title>
+<title>ACME Web Browser Client | ACME客户端H5网页单文件版，在线免费申请签发SSL/TLS通配符IP泛域名HTTPS证书，支持Let's Encrypt、ZeroSSL、IPv4、IPv6，无需账号免登录注册 | Windows macOS Get Wildcard Certificates Online For Free - Single HTML File</title>
 </head>
 
 <body>
 <script>
-var Version="1.0.260120";
+var Version="1.0.260705";
 console.log("LICENSE: GPL-3.0, https://github.com/xiangyuecn/ACME-HTML-Web-Browser-Client/blob/main/LICENSE");
 /***********************************
 中英对照翻译主要来自：Chrome自带翻译+百度翻译，由中文翻译成English（作者英文很菜）。
@@ -42,8 +42,8 @@ Thank you for watching the source code of this client. The code of all functions
 	</span>
 	
 	<ul class="itemBox feature_ul" style="list-style-type: none;margin:8px 0 0 0;padding:0 8px 0 8px;color:#666">
-		<li class="langCN"><i>功能用途</i>本网页客户端用于：向 <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a>、<a href="https://zerossl.com/" target="_blank">ZeroSSL</a>、<a href="https://pki.goog/" target="_blank">Google</a> 等支持 ACME 协议的证书颁发机构，免费申请获得用于 HTTPS 的 SSL/TLS 域名证书（RSA、ECC/ECDSA），支持多域名和通配符泛域名；只需在现代浏览器上操作即可获得 PEM 格式纯文本的域名证书，不依赖操作系统环境，无需下载和安装软件，纯手动操作，<span class="Bold">只专注于申请获得证书这一件事。</span></li>
-		<li class="langEN"><i>Functional use</i>This web client is used to: apply for free SSL/TLS domain name certificates (RSA, ECC/ECDSA) for HTTPS from <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a> , <a href="https://zerossl.com/" target="_blank">ZeroSSL</a> , <a href="https://pki.goog/" target="_blank">Google</a> and other certificate authorities that support the ACME protocol, and support multiple domain names and wildcard pan-domain names; Simply operate on a modern browser to obtain a domain name certificate in plain text in PEM format, does not depend on the operating system environment, does not need to download and install software, and is purely manual, <span class="Bold">only focus on the only thing that is to apply for and obtain a certificate.</span></li>
+		<li class="langCN"><i>功能用途</i>本网页客户端用于：向 <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a>、<a href="https://zerossl.com/" target="_blank">ZeroSSL</a>、<a href="https://pki.goog/" target="_blank">Google</a> 等支持 ACME 协议的证书颁发机构，免费申请获得用于 HTTPS 的 SSL/TLS 域名证书（RSA、ECC/ECDSA），支持多域名和通配符泛域名，部分机构支持IP证书（IPv4、IPv6）；只需在现代浏览器上操作即可获得 PEM 格式纯文本的域名证书，不依赖操作系统环境，无需下载和安装软件，纯手动操作，<span class="Bold">只专注于申请获得证书这一件事。</span></li>
+		<li class="langEN"><i>Functional use</i>This web client is used to: apply for free SSL/TLS domain name certificates (RSA, ECC/ECDSA) for HTTPS from <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a> , <a href="https://zerossl.com/" target="_blank">ZeroSSL</a> , <a href="https://pki.goog/" target="_blank">Google</a> and other certificate authorities that support the ACME protocol, and support multiple domain names and wildcard pan-domain names, some certificate authorities support IP certificates (IPv4, IPv6); Simply operate on a modern browser to obtain a domain name certificate in plain text in PEM format, does not depend on the operating system environment, does not need to download and install software, and is purely manual, <span class="Bold">only focus on the only thing that is to apply for and obtain a certificate.</span></li>
 		
 		<li class="langCN"><i>简单易用</i>点点鼠标 Ctrl+C Ctrl+V 就能完成证书的申请，全程需要的操作少，每一步都有保姆级操作提示，UI友好大气美观；<span class="Bold">本客户端不需要注册账号、更不需要登录。</span></li>
 		<li class="langEN"><i>Easy to use</i>Click the mouse and Ctrl+C Ctrl+V to complete the certificate application. The whole process requires less operations, and there are nanny level operation prompts at each step; UI friendly, atmospheric and beautiful; <span class="Bold">This client does not need to register an account, and does not need to log in.</span></li>
@@ -113,8 +113,8 @@ Thank you for watching the source code of this client. The code of all functions
 		<div style="font-size:13px;color:#aaa">
 			<div class="pd descAcmeURL descLetsEncrypt" style="display:none">
 				<a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a>:
-				<span class="langCN">请按照下面的操作步骤提示进行申请即可得到证书，证书有效期90天。</span>
-				<span class="langEN">Please follow the operation steps prompts below to apply, and you can get the certificate, which is valid for 90 days.</span>
+				<span class="langCN">请按照下面的操作步骤提示进行申请即可得到证书，域名证书有效期90天，IP证书约6天。</span>
+				<span class="langEN">Please follow the operation steps prompts below to apply, and you can get the certificate. Domain certificates are valid for 90 days, and IP certificates are valid for approximately 6 days.</span>
 			</div>
 			<div class="pd descAcmeURL descZeroSSL" style="display:none">
 				<a href="https://zerossl.com/" target="_blank">ZeroSSL</a>:
@@ -282,14 +282,14 @@ var acmeReadDirGotoCORS=function(title){
 				<span class="langEN">Domain name to be included in the certificate:</span>
 			</div>
 			<div class="pd" style="font-size:13px;color:#aaa">
-				<span class="langCN">一个证书可以包含多个域名（支持通配符），比如填写：<i class="i">a.com, *.a.com, b.com, *.b.com</i>；第一个域名将作为证书的通用名称（Common Name）；带通配符的域名只支持DNS验证，其他域名支持上传文件验证；注意：填了<i class="i">www.a.com</i>时，一般需要额外填上<i class="i">a.com</i>。</span>
-				<span class="langEN">A certificate can contain multiple domain names (wildcard are supported), for example, fill in: <i class="i">a.com, *.a.com, b.com, *.b.com</i>; the first domain name will be used as the Common Name of the certificate; Domain names with wildcard only support DNS verification, and other domain names support upload file verification ; Note: When <i class="i">www.a.com</i> is filled in, it is generally necessary to fill in <i class="i">a.com</i> additionally.</span>
+				<span class="langCN">一个证书可以包含多个域名（支持通配符），比如填写：<i class="i">a.com, *.a.com, b.com, *.b.com, 111.0.0.1, fe22:2ab::2</i>；第一个域名（IP除外）将作为证书的通用名称（Common Name）；带通配符的域名只支持DNS验证，其他域名支持上传文件验证；注意：填了<i class="i">www.a.com</i>时，一般需要额外填上<i class="i">a.com</i>。部分证书颁发机构支持填写IP地址（IPv4或IPv6），但可能需要正确选择ACME Profile才能完成签发。</span>
+				<span class="langEN">A certificate can contain multiple domain names (wildcard are supported), for example, fill in: <i class="i">a.com, *.a.com, b.com, *.b.com, 111.0.0.1, fe22:2ab::2</i>; the first domain name (excluding IP) will be used as the Common Name of the certificate; Domain names with wildcard only support DNS verification, and other domain names support upload file verification ; Note: When <i class="i">www.a.com</i> is filled in, it is generally necessary to fill in <i class="i">a.com</i> additionally. Some certificate authorities support entering an IP address (IPv4 or IPv6), but you may need to select the correct ACME Profile to complete the issuance.</span>
 			</div>
 			<div class="FlexBox">
 				<div class="FlexItem">
 					<input class="in_domains inputLang" style="width:100%"
-						placeholder-cn="请填写你的域名，多个用逗号隔开"
-						placeholder-en="Please fill in your domain name, multiple separated by commas">
+						placeholder-cn="请填写你的域名或IP，多个用逗号隔开"
+						placeholder-en="Please fill in your domain name or IP address, multiple separated by commas">
 				</div>
 				<div style="padding-left:15px;line-height:30px;font-size:13px;color:#aaa">
 					<label>
@@ -298,6 +298,54 @@ var acmeReadDirGotoCORS=function(title){
 						<span class="langEN">Remember</span>
 					</label>
 				</div>
+			</div>
+		</div>
+		
+		
+		<div class="itemBox acmeProfileShow">
+			<div class="pd Bold">
+				<span class="langCN">[可选] ACME Profile：</span>
+				<span class="langEN">[Optional] ACME Profile:</span>
+			</div>
+			<div class="pd" style="font-size:13px;color:#aaa">
+				<span class="langCN">一般保持默认不选即可；只有在你明确知晓对应选项是什么作用时，才可以进行选择，比如 Let's Encrypt 签发IP证书时必须选择 shortlived Profile。</span>
+				<span class="langEN">Generally, keeping Default NONE is sufficient; you should only make selections when you clearly understand the function of each option, such as when Let's Encrypt issues IP certificates, you must select shortlived profile.</span>
+			</div>
+			<div>
+				<label>
+					<input type="radio" name="choice_acmeProfile" value="">
+					<span class="langCN">默认不选</span>
+					<span class="langEN">Default NONE</span>
+				</label>
+				<span class="acmeProfileItems"></span>
+<script>
+var reviewAcmeProfileItems=function(dic, val){
+	if(!val) val=acmeProfileChoiceVal();
+	var list=reviewAcmeProfileItems.list=[];
+	var html=[], slcIdx=0;
+	for(var key in dic){
+		var idx=list.length, desc=dic[key], isUrl=/^https?:\/\//.test(desc);
+		if(key && key==val) slcIdx=idx+1;
+		list.push({key:key,desc:desc});
+		html.push(`<label><input type="radio" name="choice_acmeProfile" value="${idx}"> ${FormatText(key)}</label>`
+			+` <a style="font-size:13px" title="${FormatText(key)} help" `
+			+(isUrl?`href="${FormatText(desc)}" target="_blank"`:`onclick="acmeProfileItemDescClick(${idx})"`)+`>[?]</a>`
+		);
+	};
+	$(".acmeProfileItems").html(html.join("\n"));
+	
+	$("input[name=choice_acmeProfile]")[slcIdx].checked=true;
+	$(".acmeProfileShow")[list.length?'show':'hide']();
+};
+var acmeProfileItemDescClick=function(idx){
+	alert(reviewAcmeProfileItems.list[idx].desc||"-");
+};
+var acmeProfileChoiceVal=function(){
+	var val=$("input[name=choice_acmeProfile]:checked").val()||"";
+	if(!val) return "";
+	return reviewAcmeProfileItems.list[+val].key;
+};
+</script>
 			</div>
 		</div>
 		
@@ -745,8 +793,8 @@ var verifyBoxShow=function(){
 			<span class="langEN">QQ group: communication and support</span>
 		</div>
 		<div class="pd" style="font-size:13px;color:#aaa">
-			<span class="langCN">欢迎加QQ群：<i class="i">421882406</i>，纯小写口令：<i class="i">xiangyuecn</i>。如需功能定制，网站、App、小程序、前端和后端等开发需求，请加此QQ群，联系群主（即作者），谢谢~</span>
-			<span class="langEN">Welcome to join the QQ group: <i class="i">421882406</i> , code: <i class="i">xiangyuecn</i> . If you need function customization, website, app, applet, front-end and back-end development needs, please join this QQ group and contact the group owner (ie the author), thank you~</span>
+			<span class="langCN">欢迎加QQ群：①群<i class="i">421882406(满)</i>、②群<i class="i">1091335092</i>，纯小写口令：<i class="i">xiangyuecn</i>。如需功能定制，网站、App、小程序、前端和后端等开发需求，请加此QQ群，联系群主（即作者），谢谢~</span>
+			<span class="langEN">Welcome to join the QQ group: ① Group <i class="i">421882406(Full)</i>, ② Group <i class="i">1091335092</i>, code: <i class="i">xiangyuecn</i> . If you need function customization, website, app, applet, front-end and back-end development needs, please join this QQ group and contact the group owner (ie the author), thank you~</span>
 		</div>
 	</div>
 	
@@ -1249,6 +1297,8 @@ var configStepShow=function(){
 	$(".step2Show").show();
 	ShowState(".configStepState",false);
 	
+	reviewAcmeProfileItems(ACME.StepData.profileDic, DropConfigFile.useProfile||""); //显示profile选项 和 选中上次选的值
+	
 	$(".eabShow")[ACME.StepData.needEAB?'show':'hide']();
 	if(DropConfigFile.eabKid)$(".in_eab_kid").val(DropConfigFile.eabKid);
 	if(DropConfigFile.eabKey)$(".in_eab_key").val(DropConfigFile.eabKey);
@@ -1346,8 +1396,9 @@ window.configStepClick=function(){
 	$(".step2Show").show();
 	ShowState(sEl,false);
 	
-	var domains=$(".in_domains").val().trim();
+	var domains=$(".in_domains").val().trim().toLowerCase(); //域名 ip均用小写，不然大小写对比会不一致
 	var domainsStore=$(".choice_domains_store").prop("checked");
+	var useProfile=acmeProfileChoiceVal();
 	var privateKey=$(".in_privateKey").val().trim();
 	var accountKey=$(".in_accountKey").val().trim();
 	var email=$(".in_email").val().trim();
@@ -1364,8 +1415,13 @@ window.configStepClick=function(){
 			domains.splice(i,1); i--; continue;
 		}else if(mp[domain])
 			return ShowState(sEl,Lang("域名"+domain+"重复！","Duplicate domain name "+domain+"!"),1);
-		if(/[:\/;]/.test(domain))//简单校验域名格式
+		if(DomainIsIP(domain)){ //IP在csr里面需要转成原始字节，要校验
+			try{ IP2BytesOrThrow(domain) }catch(e){
+				return ShowState(sEl,Lang("IP地址["+domain+"]格式无效：","Invalid IP address format ["+domain+"]: ")+e.message,1);
+			};
+		}else if(/[:\/;]/.test(domain)){ //简单校验域名格式
 			return ShowState(sEl,Lang("域名"+domain+"格式错误！","Format error of domain name "+domain+"!"),1);
+		};
 		mp[domain]=1;
 	}
 	localStorage[InputDomainsStoreKey]=domainsStore?domains.join(", "):"";
@@ -1408,6 +1464,7 @@ window.configStepClick=function(){
 		
 		ACME.StepData.config={
 			domains:domains
+			,useProfile:useProfile
 			,privateKey:privateKeyInfo
 			,accountKey:accountKeyInfo
 			,email:email
@@ -1416,7 +1473,13 @@ window.configStepClick=function(){
 		};
 		CLog(tag, 0, "config", ACME.StepData.config);
 		
-		acmeNewAccount();
+		//测试生成csr，可以校验csr内容
+		ACME.BuildCsrAsync().then(function(csr){
+			CLog(tag, 0, "Test Check CSR\n"+csr);
+			acmeNewAccount();
+		}).catch(function(e){
+			ShowState(sEl,Lang("测试生成CSR失败：","Test to generate CSR failed: ")+e.message,1);
+		});
 	};
 	
 	//ACME账户接口调用
@@ -1881,6 +1944,7 @@ window.ACME={
 			ACME.DirData=data;
 			ACME.StepData.termsURL=meta.termsOfService;
 			ACME.StepData.needEAB=!!meta.externalAccountRequired;
+			ACME.StepData.profileDic=meta.profiles||{};
 			var saveCache=function(){
 				localStorage[dirStoreKey]=JSON.stringify(cache);
 			};
@@ -2041,10 +2105,14 @@ window.ACME={
 		var url=ACME.DirData.newOrder,config=ACME.StepData.config;
 		var dnsArr=[];
 		for(var i=0;i<config.domains.length;i++){
-			dnsArr.push({ type:"dns", value:config.domains[i] });
+			var val=config.domains[i], type=DomainIsIP(val)?"ip":"dns"; //IP标识符扩展 https://www.rfc-editor.org/rfc/rfc8738.html
+			dnsArr.push({ type:type, value:val });
 		}
 		var orderData={
 			identifiers:dnsArr
+		};
+		if(config.useProfile){
+			orderData.profile=config.useProfile; //Internet-Draft ACME Profiles Extension: https://letsencrypt.org/docs/profiles/
 		};
 		
 		Progress("newOrder...");
@@ -2152,6 +2220,19 @@ window.ACME={
 		return False(data.status+": "+FormatText(JSON.stringify(data)));
 	}
 	
+	//生成csr，第一个域名做CN
+	,BuildCsrAsync:function(){
+		var config=ACME.StepData.config,domains=config.domains;
+		return new Promise(function(resolve,reject){
+			var commonName=""; //排除IP，一般不允许IP当作通用名称
+			for(var i=0;i<domains.length;i++){ if(window.Allow_IP_CommonName || !DomainIsIP(domains[i])){ commonName=domains[i]; break; }; };
+			X509.CreateCSR(config.privateKey, commonName, domains, function(csr){
+				resolve(csr);
+			},function(err){
+				reject(new Error(err));
+			});
+		});
+	}
 	//完成订单，生成证书
 	,StepFinalizeOrder:async function(Progress,True,False){
 		var id=++ACME.SyncID;
@@ -2168,19 +2249,13 @@ window.ACME={
 		if(Err) False(Err)
 		else True();
 	} , _StepFinalizeOrderA:async function(Progress,id,tag){
-		var order=ACME.StepData.order,config=ACME.StepData.config,domains=config.domains;
+		var order=ACME.StepData.order;
 		
 		//先请求finalize
 		if(!order.finalizeIsSend){
 			Progress("finalize...");
-			//生成csr，第一个域名做CN
-			var csr=await new Promise(function(resolve,reject){
-				X509.CreateCSR(config.privateKey, domains[0], domains, function(csr){
-					resolve(csr);
-				},function(err){
-					reject(new Error(err));
-				});
-			});
+			//生成csr
+			var csr=await ACME.BuildCsrAsync();
 			order.orderCSR=csr;
 			CLog(tag,0,"CSR\n"+csr);
 			csr=Bytes2UrlB64(ASN1.PEM2Bytes(csr));
@@ -2548,13 +2623,19 @@ window.X509={
 		
 		//封装域名列表扩展属性
 		var altNameA=S(0x30);
-		for(var i=0;i<domains.length;i++)
-			altNameA.push(V(0x82, Str2Bytes(domains[i])));
+		for(var i=0;i<domains.length;i++){
+			var domain=domains[i];
+			if(DomainIsIP(domain)){ //IP 域名 类型不一样，IP还需要转成原始字节
+				try{ altNameA.push(V(0x87, IP2BytesOrThrow(domain))); }catch(e){ return False(e.message) }
+			}else{ //域名直接放字符串
+				altNameA.push(V(0x82, Str2Bytes(domain)));
+			};
+		};
 		
 		//组装CSR主体
 		var bodyA=S(0x30
 			,V(0x02, [0]) //版本号 固定值0
-			,S(0x30, S(0x31 ,S(0x30 //只提供一个属性：CN
+			,S(0x30, S(0x31 ,S(0x30 //只提供一个属性：CN ，一般不可以放IP 可以放空字符串
 				,V(0x06, ASN1.OID2Bytes("2.5.4.3"))
 				,V(0x0C, Str2Bytes(commonName))
 			)))
@@ -2562,7 +2643,7 @@ window.X509={
 			,S(0xA0, S(0x30 //扩展属性，域名列表
 				,V(0x06, ASN1.OID2Bytes("1.2.840.113549.1.9.14"))
 				,S(0x31, S(0x30, S(0x30
-					,V(0x06, ASN1.OID2Bytes("2.5.29.17"))
+					,V(0x06, ASN1.OID2Bytes("2.5.29.17")) //主题备用名称 SAN
 					,V(0x04, altNameA.toBytes())
 				)))
 			))
@@ -2924,6 +3005,29 @@ fn.prototype={
 /************** functions **************/
 window.FormatText=function(str){
 	return str.replace(/[&<>='"]/g,function(a){ return "&#" + a.charCodeAt(0) + ";" });
+};
+
+window.DomainIsIP=function(str){ //IPv4 IPv6
+	if(/^\d+\.\d+\.\d+\.\d+$/.test(str)) return 4;
+	if(/:/.test(str)) return 6;
+	return 0;
+};
+window.IP2BytesOrThrow=function(ip){
+	var ver=DomainIsIP(ip);
+	if(ver==4){
+		var bytes=new Uint8Array(4), arr=ip.split(".");
+		if(+arr[0]>0xff || +arr[1]>0xff || +arr[2]>0xff || +arr[3]>0xff) throw new Error("Invalid IPv4 format");
+		bytes[0]=+arr[0]; bytes[1]=+arr[1]; bytes[2]=+arr[2]; bytes[3]=+arr[3];
+	}else if(ver==6){
+		var arr=ip.split(":"), aLen=0;for(var i=0;i<arr.length;i++){ if(arr[i])aLen++; }; //完整8段
+		ip=ip.replace(/::/,function(){ return ":"+new Array(8-aLen+1).join("0000:") });
+		ip=ip.replace(/^:+|:+$/g,"").replace(/[^:]+/g,function(a){ return a.length>=4?a:("0000"+a).substr(-4) }); //补齐4个字一段
+		ip=ip.replace(/:/g,""); if(/([^\dA-F])/i.test(ip)) throw new Error("This IPv6 format ["+RegExp.$1+"] is not supported");
+		if(ip.length!=32) throw new Error("IPv6 length ["+ip.length+"] error");
+		var bytes=new Uint8Array(16);
+		for(var i=0;i<16;i++) bytes[i]=parseInt("0x"+ip.substr(i*2,2));
+	}else{ throw new Error("Not an IPv4 or IPv6 address") };
+	return bytes;
 };
 
 window.Str2Bytes=function(str){
